@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce implementation</title>
+</head>
+<body>
+    Array.prototype.myReduce = function(callback, initialVal) {
+        var accumulator = (initialVal !== undefined) ? initialVal : undefined;
+        for (var i=0; i<this.length; i++) {
+          if (accumulator !== undefined) {
+            accumulator = callback(accumulator, this[i], i, this);
+          } else {
+            accumulator = this[i]
+          }
+        }
+        return accumulator;
+      };
+      
+      arr.myReduce( (accumulator, elem) => accumulator+=elem )
+      arr.myReduce( (accumulator, elem) => accumulator+=elem , 100)
+</body>
+</html>
