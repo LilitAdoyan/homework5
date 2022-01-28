@@ -52,34 +52,6 @@ function isAsogram(str){
 
 console.log(isAsogram(str));
 
-//5-1b
-
-function myFill(arrFill, k1, pos1=null, pos2=null){
-if ( pos1===null && pos2===null &&pos1>pos2){
-    for (let i=pos1; i<pos2; i++){
-        arrFill[i]=k1;
-    }
-} else if(typeof(pos1)===Number && typeof(pos2)===null){
-    for (let i=pos1; i<arrFill.length; i++){
-        arrFill[i]=k1;
-    }
-    
-} else{ for(let i=0; i<arrFill.length;i++){
-    arrFill[i]=k1;
-}
-
-}
-
-return arrFill;
-
-
-}
-
-const arr51b=[1,5,5,9];
-console.log(myFill(arr51b, 7,1));
-
-
-
 //1c
 
 function myFind(arr, value){
@@ -109,7 +81,7 @@ return -1;
 let f=[4,5,5,8,9];
 console.log(myFindIndex(f, 8));
 
-//4f
+//1f
 
 function mapFunc(elem){
     return elem*2;
