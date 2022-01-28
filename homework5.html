@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //5-1a
+        function myConcat(innitialArr, ...arrs) {
+            let newArr = [];
+            for (let i = 0; i < initialArr.length; i++) {
+                newArr.push(initialArr[i]);
+            }
+            for (let j = 0; j < arrs.length; j++) {
+                if (Array.isArray(arrs[j])) {
+                    let arr = arrs[j];
+                    for (let k = 0; k < 0; k++) {
+                        newArr.push(arr[k]);
+                    }
+                } else {
+                    newArr.push(arrs[i]);
+                }
+            }
+            return newArr;
+        }
+
+        //5-2
+        function hasDuplicates(a) {
+
+const noDups = new Set(a);
+
+return a.length !== noDups.size;
+}
+
+let arr5=[4];
+console.log(hasDuplicates(arr5));
+
+
+//5-3
+let str="hg kjhgfd jhg";
+function isAsogram(str){
+    let arr53=str.split("");
+    const strSet=new Set(arr53);
+    return arr53.length !== strSet.size;
+    
+}
+
+console.log(isAsogram(str));
+
+//5-1b
+
+function myFill(arrFill, k1, pos1=null, pos2=null){
+if ( pos1===null && pos2===null &&pos1>pos2){
+    for (let i=pos1; i<pos2; i++){
+        arrFill[i]=k1;
+    }
+} else if(typeof(pos1)===Number && typeof(pos2)===null){
+    for (let i=pos1; i<arrFill.length; i++){
+        arrFill[i]=k1;
+    }
+    
+} else{ for(let i=0; i<arrFill.length;i++){
+    arrFill[i]=k1;
+}
+
+}
+
+return arrFill;
+
+
+}
+
+const arr51b=[1,5,5,9];
+console.log(myFill(arr51b, 7,1));
+
+
+
+//1c
+
+function myFind(arr, value){
+for (let i=0; i<arr.length; i++){
+if(arr[i]===value){
+    return arr[i];
+}
+//break;
+}
+
+}
+let d=[4,5,5,8,9];
+console.log(myFind(d, 7));
+
+//1d findindex
+
+function myFindIndex(arr, value){
+for (let i=0; i<arr.length; i++){
+if(arr[i]===value){
+    return i;
+}
+
+}
+return -1;
+
+}
+let f=[4,5,5,8,9];
+console.log(myFindIndex(f, 8));
+
+//4f
+
+function mapFunc(elem){
+    return elem*2;
+}
+function myMap(arrformap){
+let arrMap=[];
+for(let i=0;i<arrformap.length;i++){
+    
+    arrMap.push(mapFunc(arrformap[i]));
+
+}
+return arrMap;
+}
+const mappp=myMap([2,2,2,5]);
+console.log(mappp);
+    </script>
+</body>
+
+</html>
