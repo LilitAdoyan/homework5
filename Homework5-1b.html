@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//5-1b
+function myFill(arrFill, k1, pos1, pos2){
+if ( typeof(pos1)==="number" && typeof(pos2)==="number" && pos1<pos2){
+    for (let i=pos1; i<pos2; i++){
+        arrFill[i]=k1;
+    }
+} else if((typeof(pos1)==="number") && (typeof(pos2)==="object"||"undefined")){
+    for (let i=pos1; i<arrFill.length; i++){
+        arrFill[i]=k1;
+    }
+    
+} else if ((typeof(pos1)==="object"||"undefined")&&(typeof(pos2)==="object"||"undefined")){ for(let i=0; i<arrFill.length;i++){
+    arrFill[i]=k1;
+}}
+return arrFill;
+}
+
+const arr51b=[1,5,5,9];
+console.log(myFill(arr51b, 7,2,3));
+
+    </script>
+</body>
+
+</html>
